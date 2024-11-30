@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Loading from "./components/Loading";
 import Projects from "./pages/Projects";
+import Navbar from "./components/Navbar";
+import Tools from "./pages/Tools";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -24,19 +28,23 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <main className={theme === "dark" ? "dark" : undefined}>
-        {isLoading ? (
-          <Loading />
-        ) : (
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <main className={theme === "dark" ? "dark" : undefined}>
+          <Navbar />
           <Routes>
             <Route
               path="/"
               element={<Home onChangeTheme={handleThemeChange} />}
             />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/tools" element={<Tools />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
           </Routes>
-        )}
-      </main>
+        </main>
+      )}
     </BrowserRouter>
   );
 };
