@@ -1,9 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 
-interface NavbarProps {
-  location: string;
-}
-
 const Navbar = () => {
   const loc = useLocation().pathname;
   const activePageClass = (path: string) =>
