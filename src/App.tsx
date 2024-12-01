@@ -36,7 +36,7 @@ const App = () => {
           <Routes>
             <Route
               path="/"
-              element={<Home onChangeTheme={handleThemeChange} />}
+              element={<Home onClick={handleThemeChange} />}
             />
             <Route path="/projects" element={<Projects />} />
             <Route path="/tools" element={<Tools />} />
