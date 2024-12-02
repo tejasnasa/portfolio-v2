@@ -1,16 +1,19 @@
 interface ThemeSwitchProps {
-  onClick: () => void;
+  isDarkMode: boolean;
+  handleThemeSwitch: () => void;
 }
 
-const ThemeSwitch = ({ onClick }: ThemeSwitchProps) => {
+const ThemeSwitch = ({ isDarkMode, handleThemeSwitch }: ThemeSwitchProps) => {
   return (
-    <div className="h-40 w-96">
+    <div className=" w-96 bg-white dark:bg-[#26242E] border-2 border-black dark:border-white m-10">
       <input
         id="switch"
         type="checkbox"
-        onChange={onClick}
+        checked={isDarkMode}
+        onChange={handleThemeSwitch}
+        className="hidden"
       />
-      <div className="app">
+      <div className="box">
         <div className="content">
           <div className="circle">
             <div className="crescent"></div>
@@ -20,7 +23,7 @@ const ThemeSwitch = ({ onClick }: ThemeSwitchProps) => {
             <div className="toggle"></div>
             <div className="names">
               <p className="light">Light</p>
-              <p className="dark">Dark</p>
+              <p className="dark22">Dark</p>
             </div>
           </label>
         </div>

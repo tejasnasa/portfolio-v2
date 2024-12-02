@@ -9,14 +9,23 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 
 const App = () => {
-  const [theme, setTheme] = useState("light");
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  const handleThemeChange = () => {
-    setTheme((theme) => {
-      if (theme === "light") {
-        return "dark";
-      } else return "light";
+  useEffect(() => {
+    const theme = localStorage.getItem("darkMode");
+    if (theme === null) {
+      localStorage.setItem("darkMode", "false");
+    } else {
+      setIsDarkMode(theme === "true");
+    }
+  });
+
+  const handleThemeSwitch = () => {
+    setIsDarkMode((prev) => {
+      const newTheme = !prev;
+      localStorage.setItem("darkMode", `${newTheme}`);
+      return newTheme;
     });
   };
 
@@ -31,12 +40,17 @@ const App = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <main className={theme === "dark" ? "dark" : undefined}>
+        <main className={isDarkMode ? "dark" : undefined}>
           <Navbar />
           <Routes>
             <Route
               path="/"
-              element={<Home onClick={handleThemeChange} />}
+              element={
+                <Home
+                  isDarkMode={isDarkMode}
+                  handleThemeSwitch={handleThemeSwitch}
+                />
+              }
             />
             <Route path="/projects" element={<Projects />} />
             <Route path="/tools" element={<Tools />} />
