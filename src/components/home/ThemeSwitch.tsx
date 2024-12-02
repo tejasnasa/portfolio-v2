@@ -5,7 +5,7 @@ interface ThemeSwitchProps {
 
 const ThemeSwitch = ({ isDarkMode, handleThemeSwitch }: ThemeSwitchProps) => {
   return (
-    <div className=" w-96 bg-white dark:bg-[#26242E] border-2 border-black dark:border-white m-10">
+    <div className="h-fit w-96 bg-white dark:bg-[#26242E] border-2 border-black dark:border-white m-10">
       <input
         id="switch"
         type="checkbox"

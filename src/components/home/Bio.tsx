@@ -27,7 +27,7 @@ const Bio = () => {
 
   return (
     <section
-      className="h-auto w-fit border-black border-2 overflow-hidden dark:border-white m-10"
+      className="h-fit w-fit border-black border-2 overflow-hidden dark:border-white m-10"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >

@@ -32,7 +32,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 0);
   }, []);
 
   return (
