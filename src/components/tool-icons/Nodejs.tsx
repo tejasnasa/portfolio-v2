@@ -1,9 +1,9 @@
-import img from "../../assets/imag/nodejs.svg";
+import img from "../../assets/tools/nodejs.svg";
 
 const Nodejs = () => {
   return (
     <a href="gdg" className="hover:cursor-default">
-      <img src={img} className="h-9 m-2" />
+      <img src={img} className="h-8 m-2 mx-3" />
     </a>
   );
 };

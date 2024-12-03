@@ -1,10 +1,9 @@
-import proj from "../../assets/1726113129618.jpg";
-
 interface ProjectProps {
   name: string;
   livelink: string;
   github: string;
   description: string;
+  image: string;
   tools: React.ReactNode[];
 }
 
@@ -13,6 +12,7 @@ const Project = ({
   livelink,
   github,
   description,
+  image,
   tools,
 }: ProjectProps) => {
   return (
@@ -23,7 +23,7 @@ const Project = ({
           className="w-[45%] m-3 hover:ring-gray-400 dark:hover:ring-gray-500 hover:ring-4 hover:transition duration-700 ease-in-out hover:cursor-default"
           target="_blank"
         >
-          <img src={proj} />
+          <img src={image} />
         </a>
         <div className="w-[50%] m-3 flex flex-col justify-around">
           <h1 className="kanit text-xl">{name}</h1>
