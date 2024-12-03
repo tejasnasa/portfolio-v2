@@ -9,7 +9,7 @@ interface HomeProps {
 
 const Home = ({ isDarkMode, handleThemeSwitch }: HomeProps) => {
   return (
-    <section className="h-dvh flex flex-wrap w-[88%] mx-auto">
+    <section className="h-dvh flex flex-wrap w-[88%] mx-auto pt-12">
       <Bio />
       <ThemeSwitch
         isDarkMode={isDarkMode}
