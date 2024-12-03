@@ -1,7 +1,5 @@
-import React from "react";
-
 const Contact = () => {
-  return <div>Contact</div>;
+  return <section className="h-dvh flex flex-wrap w-[88%] mx-auto"></section>;
 };
 
 export default Contact;

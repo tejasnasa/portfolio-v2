@@ -40,24 +40,26 @@ const App = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <main className={isDarkMode ? "dark" : undefined}>
-          <Navbar />
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Home
-                  isDarkMode={isDarkMode}
-                  handleThemeSwitch={handleThemeSwitch}
-                />
-              }
-            />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/tools" element={<Tools />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </main>
+        <div className={`${isDarkMode ? "dark" : undefined} `}>
+          <main className=" flex justify-center flex-col polka">
+            <Navbar />
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Home
+                    isDarkMode={isDarkMode}
+                    handleThemeSwitch={handleThemeSwitch}
+                  />
+                }
+              />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/tools" element={<Tools />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </main>
+        </div>
       )}
     </BrowserRouter>
   );

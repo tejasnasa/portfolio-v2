@@ -1,9 +1,5 @@
-import React from 'react'
-
 const Tools = () => {
-  return (
-    <div>Tools</div>
-  )
-}
+  return <section className="h-dvh flex flex-wrap w-[88%] mx-auto"></section>;
+};
 
-export default Tools
+export default Tools;

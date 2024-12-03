@@ -6,9 +6,8 @@ const Navbar = () => {
     loc === path ? "text-green-500" : undefined;
 
   return (
-    <header className="bg-[#F7F2F2] dark:bg-[#1A1A1A] dark:text-white">
+    <header className="bg-[#F7F2F2] dark:bg-[#1A1A1A] dark:text-white flex justify-between">
       <div>Tejas</div>
-      <div>{loc}</div>
       <div>
         <Link to={"/"} className={activePageClass("/")}>
           Home
@@ -26,6 +25,7 @@ const Navbar = () => {
           Contact
         </Link>
       </div>
+      <div></div>
     </header>
   );
 };

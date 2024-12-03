@@ -9,8 +9,7 @@ interface HomeProps {
 
 const Home = ({ isDarkMode, handleThemeSwitch }: HomeProps) => {
   return (
-    <section className="dark:bg-[#1A1A1A] bg-[#F7F2F2] h-[5000px] flex dark:text-white flex-wrap">
-      <h1>Home</h1>
+    <section className="h-dvh flex flex-wrap w-[88%] mx-auto">
       <Bio />
       <ThemeSwitch
         isDarkMode={isDarkMode}

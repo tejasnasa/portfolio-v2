@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Qwitcher+Grypen:wght@400;700&family=Shadows+Into+Light&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.polka {
+  background-image: radial-gradient(#59637281 1.2px, #f7f2f2 1.2px);
+  background-size: 45px 45px;
+}
+
+.dark .polka {
+  background-image: radial-gradient(#9e9797 1.2px, #1a1a1a 1.2px);
+  background-size: 45px 45px;
+}
 
 .loader {
   --c: no-repeat linear-gradient(rgb(240, 83, 83) 0 0);
