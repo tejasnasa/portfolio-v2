@@ -1,6 +1,6 @@
 import { useState } from "react";
-import img1 from "../../assets/img/bio1.png";
-import img2 from "../../assets/img/bio2.png";
+import img1 from "../../assets/images/bio1.png";
+import img2 from "../../assets/images/bio2.png";
 
 const Bio = () => {
   const [image, setImage] = useState(img1);

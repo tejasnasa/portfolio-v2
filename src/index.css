@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+HR+Lijeva:wght@100..400&family=Qwitcher+Grypen:wght@400;700&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playwrite+HR+Lijeva&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -18,6 +18,12 @@
   font-family: "Playwrite HR Lijeva", cursive;
   font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
+}
+
+.kanit {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
   font-style: normal;
 }
 

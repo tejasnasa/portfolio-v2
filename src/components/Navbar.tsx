@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const loc = useLocation().pathname;
   const activePageClass = (path: string) =>
-    loc === path ? "border-[1px] border-gray-300" : undefined;
+    loc === path ? "border-[1px] border-gray-300 dark:border-gray-700" : undefined;
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className="bg-transparent backdrop-filter backdrop-blur-sm fixed w-full z-40 top-0 start-0">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <h2 className="playwrite-hr-lijeva text-sky-800 text-[25px] lg:text-[20px] font-bold">
+        <h2 className="playwrite-hr-lijeva text-sky-800 text-[25px] lg:text-[25px] font-bold">
           Tejas
         </h2>
         <div
