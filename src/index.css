@@ -27,7 +27,6 @@
   font-style: normal;
 }
 
-
 .loader {
   --c: no-repeat linear-gradient(rgb(240, 83, 83) 0 0);
   background: var(--c), var(--c), var(--c), var(--c), var(--c), var(--c),
