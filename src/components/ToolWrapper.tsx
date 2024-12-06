@@ -15,7 +15,7 @@ const ToolWrapper = ({ page, img, url }: ToolWrapperProp) => {
     >
       <img
         src={img}
-        className={`m-2 mx-3 ${page === "tools" ? "h-10" : "h-8"}`}
+        className={`m-2 ${page === "tools" ? "h-10" : "h-9"}`}
       />
     </a>
   );
