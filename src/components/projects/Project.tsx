@@ -1,10 +1,12 @@
+import ToolImage from "./ToolImage";
+
 interface ProjectProps {
   name: string;
   livelink: string;
   github: string;
   description: string;
   image: string;
-  tools: React.ReactNode[];
+  tools: Object;
 }
 
 const Project = ({
@@ -16,20 +18,21 @@ const Project = ({
   tools,
 }: ProjectProps) => {
   return (
-    <div className="flex flex-col w-[48%] h-min dark:bg-[#1F2937] bg-white p-4 rounded-[32px] my-4">
-      <div className="flex">
+    <div className="flex flex-col lg:w-[48%] md:w-[96%] h-min dark:bg-[#1F2937] bg-white p-4 rounded-[32px] my-4">
+      <div className="flex flex-col md:flex-row">
         <a
           href={livelink}
-          className="w-[45%] m-3 hover:ring-gray-400 dark:hover:ring-gray-500 hover:ring-4 hover:transition duration-700 ease-in-out hover:cursor-default"
+          className="w-[96%] md:w-[45%] m-3 hover:ring-gray-400 dark:hover:ring-gray-500 hover:ring-4 hover:transition duration-700 ease-in-out hover:cursor-default"
           target="_blank"
         >
-          <img src={image} />
+          <img src={image} className="h-52 w-dvw object-cover" alt={name} />
         </a>
-        <div className="w-[50%] m-3 flex flex-col justify-around">
+        <div className="w-[96%] md:w-[50%] m-3 flex flex-col justify-around">
           <h1 className="kanit text-xl">{name}</h1>
           <p className="text-sm dark:text-gray-300 text-gray-600">
             {description}
           </p>
+          <div></div>
         </div>
       </div>
       <div className="flex justify-between">
@@ -94,7 +97,11 @@ const Project = ({
             </div>
           </a>
         </div>
-        <div className="flex">{tools}</div>
+        <div className="flex">
+          {Object.entries(tools).map(([key, { img, url }]) => [
+            <ToolImage key={key} img={img} url={url} />,
+          ])}
+        </div>
       </div>
     </div>
   );

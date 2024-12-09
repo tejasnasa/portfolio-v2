@@ -1,5 +1,11 @@
+import Message from "../components/contact/Message";
+
 const Contact = () => {
-  return <section className="h-dvh flex flex-wrap w-[88%] mx-auto"></section>;
+  return (
+    <section className="w-[84%] h-dvh mx-auto mt-24 text-white flex">
+        <Message />
+    </section>
+  );
 };
 
 export default Contact;
