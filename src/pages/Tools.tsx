@@ -1,5 +1,5 @@
 import ToolComponent from "../components/tools/ToolComponent";
-import toolData from "../data/ToolData";
+import toolData from "../data/toolData";
 import img from "../assets/images/tool.svg";
 
 const Tools = () => {
