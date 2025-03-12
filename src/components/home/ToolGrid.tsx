@@ -22,7 +22,7 @@ const ToolGrid = () => {
           <a
             key={url}
             href={url}
-            className="cursor-auto bg-[#374151] w-[27%] rounded-xl aspect-square p-4 m-2"
+            className="cursor-auto bg-[#374151] w-[27%] rounded-xl aspect-square p-4 m-2" target="_blank"
           >
             <img src={img} className="w-full h-auto object-contain" />
           </a>
