@@ -1,6 +1,7 @@
 import Bio from "../components/home/Bio";
 import Carousel from "../components/home/Carousel";
 import ThemeSwitch from "../components/home/ThemeSwitch";
+import ToolGrid from "../components/home/ToolGrid";
 
 interface HomeProps {
   isDarkMode: boolean;
@@ -13,9 +14,7 @@ const Home = ({ isDarkMode, handleThemeSwitch }: HomeProps) => {
       <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 lg:grid-rows-4 md:grid-rows-8 sm:grid-rows-16 gap-3 h-[1200px]">
         <Bio />
         <div className="col-span-1 row-span-1 dark:bg-[#1F2937] bg-white rounded-[32px]"></div>
-        <div className="col-span-1 row-span-2 dark:bg-[#1F2937] bg-white rounded-[32px]">
-          C
-        </div>
+        <ToolGrid/>
         <ThemeSwitch
           isDarkMode={isDarkMode}
           handleThemeSwitch={handleThemeSwitch}

@@ -1,10 +1,11 @@
 interface LinkButtonProps {
   url: string;
+  openInNewTab: boolean;
 }
 
-const LinkButton = ({ url }: LinkButtonProps) => {
+const LinkButton = ({ url, openInNewTab }: LinkButtonProps) => {
   return (
-    <a href={url} target="_blank">
+    <a href={url} target={openInNewTab ? "_blank" : undefined}>
       <div className="bg-gray-300 dark:bg-gray-700 w-10 h-10 rounded-full flex justify-center items-center hover:ring-4 ring-gray-200 dark:ring-gray-400 hover:transition duration-700 ease-in-out">
         <svg
           id="Arrow.7"

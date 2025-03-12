@@ -214,7 +214,7 @@ label {
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
-  background: #26242e;
+  background: #1F2937;
 }
 
 [type="checkbox"]:checked + .box .circle {
