@@ -15,7 +15,7 @@ const ToolComponent = ({ name, img, url, description }: ToolComponentProps) => {
           <img src={img} alt="name" className="h-12" />
           <h3 className="text-2xl py-2">{name}</h3>
         </div>
-        <LinkButton url={url} />
+        <LinkButton openInNewTab={false} url={url} />
       </div>
       <p className="text-sm dark:text-gray-300 text-gray-600">{description}</p>
     </div>
