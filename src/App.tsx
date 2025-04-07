@@ -19,7 +19,7 @@ const App = () => {
     } else {
       setIsDarkMode(theme === "true");
     }
-  });
+  }, []);
 
   const handleThemeSwitch = () => {
     setIsDarkMode((prev) => {

@@ -1,37 +1,37 @@
 import toolData from "./toolData";
 import kinoflow from "../assets/proj/kinoflow.jpg";
+import echoes from "../assets/proj/echoes.png";
+import budgex from "../assets/proj/budgex.png";
+import ada from "../assets/proj/ada.png";
 
 const projectData = [
   {
-    name: "Unifyr",
+    name: "Echoes",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusamus culpa necessitatibus nobis labore praesentium odit, inventore non quasi molestias, rem et? In consequatur, laudantium alias necessitatibus eveniet qui. Doloribus.",
-    livelink: "https://unifyr.vercel.app/",
+      "This is a full stack social media website, with thread-like posting system, likes, bookmarks and reposts.",
+    livelink: "https://echoworld.vercel.app/",
     github: "https://github.com/tejasnasa/unifyr",
-    image: "https://via.placeholder.com/300x300?text=unifyr",
+    image: echoes,
     tools: [
       toolData.TypeScript,
       toolData.Nodejs,
-      toolData.Supabase,
       toolData.Drizzle,
-      toolData.Nextjs,
       toolData.Tailwind,
+      toolData.Reactjs,
     ],
   },
   {
     name: "Budgex",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusamus culpa necessitatibus nobis labore praesentium odit, inventore non quasi molestias, rem et? In consequatur, laudantium alias necessitatibus eveniet qui. Doloribus.",
+      "Personal financial tracker for students, with an advanced dashboard",
     livelink: "https://budgex.vercel.app/",
     github: "https://github.com/tejasnasa/budgex",
-    image: "https://via.placeholder.com/300x300?text=budgex",
+    image: budgex,
     tools: [
       toolData.TypeScript,
-      toolData.Reactjs,
-      toolData.Tailwind,
-      toolData.SQLite,
-      toolData.Drizzle,
-      toolData.Vite,
+      toolData.PostgreSQL,
+      toolData.Prisma,
+      toolData.Nextjs,
     ],
   },
   {
@@ -97,13 +97,18 @@ const projectData = [
     ],
   },
   {
-    name: "Untitled Code Editor",
+    name: "Ada",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga accusamus culpa necessitatibus nobis labore praesentium odit, inventore non quasi molestias, rem et? In consequatur, laudantium alias necessitatibus eveniet qui. Doloribus.",
     github: "https://github.com/tejasnasa",
     livelink: "https://kinoflow.vercel.app",
-    image: "https://via.placeholder.com/300x300?text=tejix",
-    tools: [toolData.Bootstrap, toolData.Nodejs, toolData.Express, toolData.JavaScript],
+    image: ada,
+    tools: [
+      toolData.Bootstrap,
+      toolData.Nodejs,
+      toolData.Express,
+      toolData.JavaScript,
+    ],
   },
   {
     name: "Algorithm Visualiser",
@@ -121,7 +126,12 @@ const projectData = [
     github: "https://github.com/tejasnasa",
     livelink: "https://kinoflow.vercel.app",
     image: "https://via.placeholder.com/300x300?text=tejix",
-    tools: [toolData.Bootstrap, toolData.Nodejs, toolData.Express, toolData.JavaScript],
+    tools: [
+      toolData.Bootstrap,
+      toolData.Nodejs,
+      toolData.Express,
+      toolData.JavaScript,
+    ],
   },
   {
     name: "Full Stack Todo List",
@@ -130,7 +140,12 @@ const projectData = [
     github: "https://github.com/tejasnasa",
     livelink: "https://kinoflow.vercel.app",
     image: "https://via.placeholder.com/300x300?text=tejix",
-    tools: [toolData.Bootstrap, toolData.Nodejs, toolData.Express, toolData.JavaScript],
+    tools: [
+      toolData.Bootstrap,
+      toolData.Nodejs,
+      toolData.Express,
+      toolData.JavaScript,
+    ],
   },
   {
     name: "Full Stack Instagram Clone",
@@ -139,7 +154,12 @@ const projectData = [
     github: "https://github.com/tejasnasa",
     livelink: "https://kinoflow.vercel.app",
     image: "https://via.placeholder.com/300x300?text=tejix",
-    tools: [toolData.Bootstrap, toolData.Nodejs, toolData.Express, toolData.JavaScript],
+    tools: [
+      toolData.Bootstrap,
+      toolData.Nodejs,
+      toolData.Express,
+      toolData.JavaScript,
+    ],
   },
   {
     name: "Tic-Tac-Toe",
@@ -157,7 +177,12 @@ const projectData = [
     github: "https://github.com/tejasnasa",
     livelink: "https://kinoflow.vercel.app",
     image: "https://via.placeholder.com/300x300?text=tejix",
-    tools: [toolData.Bootstrap, toolData.Nodejs, toolData.Express, toolData.JavaScript],
+    tools: [
+      toolData.Bootstrap,
+      toolData.Nodejs,
+      toolData.Express,
+      toolData.JavaScript,
+    ],
   },
   {
     name: "Login Demo",
@@ -166,7 +191,12 @@ const projectData = [
     github: "https://github.com/tejasnasa",
     livelink: "https://kinoflow.vercel.app",
     image: "https://via.placeholder.com/300x300?text=tejix",
-    tools: [toolData.Bootstrap, toolData.Nodejs, toolData.Express, toolData.JavaScript],
+    tools: [
+      toolData.Bootstrap,
+      toolData.Nodejs,
+      toolData.Express,
+      toolData.JavaScript,
+    ],
   },
   {
     name: "Geek Room Portal Backend",
@@ -175,7 +205,12 @@ const projectData = [
     github: "https://github.com/tejasnasa",
     livelink: "https://kinoflow.vercel.app",
     image: "https://via.placeholder.com/300x300?text=tejix",
-    tools: [toolData.Bootstrap, toolData.Nodejs, toolData.Express, toolData.JavaScript],
+    tools: [
+      toolData.Bootstrap,
+      toolData.Nodejs,
+      toolData.Express,
+      toolData.JavaScript,
+    ],
   },
 ];
 

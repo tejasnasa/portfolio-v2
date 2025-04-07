@@ -31,9 +31,17 @@ const Bio = () => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <img src={image} className="h-40" />
-      <div>{greetingMessage()}</div>
-      <div>I'm Tejas, fr</div>
+      <div className="flex">
+        <img src={image} className="h-40" />
+        <div className="bg-[#F25E3B] px-4 py-2 font-semibold rounded-full h-min m-4 ml-0">
+          {greetingMessage()}
+        </div>
+      </div>
+      <div className="p-4 text-gray-300">
+        I'm Tejas Nasa, an enthusiastic full stack developer, with focus on
+        backend development. I focus on building efficient, scalable web
+        applications that meet both user needs and business goals.
+      </div>
     </section>
   );
 };

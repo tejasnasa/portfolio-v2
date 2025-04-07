@@ -7,14 +7,19 @@ const sj = new SubmitJSON({
   endpoint: import.meta.env.VITE_SUBMITJSON_ENDPOINT,
 });
 
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
 const Message = () => {
-  const [data, setData] = useState({
+  const [data, setData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
   const [error, setError] = useState("");
-  const [errors, setErrors] = useState({});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -23,7 +28,6 @@ const Message = () => {
       [name]: value,
     }));
     setError("");
-    setErrors({ ...errors, [e.target.name]: "" });
   };
 
   const handleMessage = async (e: React.FormEvent) => {
@@ -31,17 +35,12 @@ const Message = () => {
     const validation = validateMessage(data);
     if (!validation.success) {
       setError(validation.error.errors[0].message);
-      const newErrors: any = {};
-      validation.error.errors.forEach((err) => {
-        newErrors[err.path[0]] = err.message;
-      });
-      setErrors(newErrors);
     } else {
       setError("");
       try {
         await sj.submit(data);
       } catch (err) {
-        console.error("Error during login:", err);
+        console.error("Error during submission:", err);
       }
     }
   };
@@ -71,11 +70,7 @@ const Message = () => {
           value={data.message}
           onChange={handleChange}
         />
-        <button
-          type="submit"
-        >
-          SUBMIT
-        </button>
+        <button type="submit">SUBMIT</button>
       </form>
       <div className="h-[20px] m-1 p-2">
         {error && (

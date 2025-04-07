@@ -6,6 +6,6 @@ const messageSchema = z.object({
   message: z.string().min(1, { message: "Message cannot be empty" }),
 });
 
-export const validateMessage = (data: any) => {
+export const validateMessage = (data: z.infer<typeof messageSchema>) => {
   return messageSchema.safeParse(data);
 };
